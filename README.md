@@ -154,13 +154,13 @@ function closeViewer() {
 
 我们欢迎任何形式的贡献，包括功能请求、错误报告、代码改进和文档完善。
 
-- [查看源码](https://github.com/your-github-username/photo-gallery)
-- [报告问题](https://github.com/your-github-username/photo-gallery/issues)
-- [Fork项目](https://github.com/your-github-username/photo-gallery/fork)
+- [查看源码](https://github.com/yichenblog/photo-gallery/)
+- [报告问题](https://github.com/yichenblog/photo-gallery/issues)
+- [Fork项目](https://github.com/yichenblog/photo-gallery/fork)
 
 ## 联系方式
 
 如有任何问题或建议，欢迎通过以下方式联系我们：
 
-- GitHub: [your-github-username](https://github.com/your-github-username)
+- GitHub: [https://github.com/yichenblog/](https://github.com/yichenblog/)
 - 邮箱: yic@rl1.cc 
