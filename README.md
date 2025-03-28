@@ -1,7 +1,7 @@
 # 简约相册开源项目
 
 <p align="center">
-  <img src="img/logo.jpg" alt="简约相册" width="150">
+  <img src="https://img.alicdn.com/imgextra/i2/2212723071657/O1CN01dY34ov1O6xKESoh5k_!!2212723071657.jpg" alt="简约相册" width="150">
 </p>
 
 <p align="center">
