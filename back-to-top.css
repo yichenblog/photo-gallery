@@ -1,0 +1,96 @@
+/* 返回顶部按钮样式 */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    color: var(--dark-color);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: opacity;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top-btn.active {
+    background-color: rgba(255, 107, 107, 0.15);
+}
+
+.back-to-top-btn i {
+    color: var(--primary-color);
+    transition: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.back-to-top-btn:hover i {
+    transform: translate(-50%, -50%);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgb(255, 255, 255);
+        transition: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .back-to-top-btn.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .back-to-top-btn:hover, 
+    .back-to-top-btn:active, 
+    .back-to-top-btn:focus {
+        background: rgb(255, 255, 255);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .back-to-top-btn:hover i, 
+    .back-to-top-btn:active i, 
+    .back-to-top-btn:focus i {
+        transform: translate(-50%, -50%);
+    }
+    
+    .back-to-top-btn.active {
+        background-color: rgb(255, 235, 235);
+    }
+}

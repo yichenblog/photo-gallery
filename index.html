@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾婉之 - 照片集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-fix.css">
+    <link rel="stylesheet" href="back-to-top.css">
+</head>
+<body>
+    <!-- 悬浮的关于按钮 -->
+    <button id="about-btn" class="about-btn" aria-label="关于曾婉之">
+        <i class="fas fa-info"></i>
+    </button>
+    
+    <!-- 关于曾婉之的卡片 -->
+    <div class="about-card" id="about-card">
+        <button class="close-about" aria-label="关闭">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="about-content">
+            <div class="about-header">
+                <div class="about-avatar">
+                    <img src="img/logo.jpg" alt="曾婉之头像">
+                </div>
+                <h3>关于曾婉之</h3>
+            </div>
+            <div class="about-description">
+                <p>曾婉之，一个活泼且充满好奇心的小女孩。2021年出生的🐮宝宝，喜欢看书，最爱的是咩猫和各种好吃的美食。</p>
+                <p>她有着天真烂漫的笑容，能够感染周围的每一个人。这个照片集记录了她成长过程中的精彩瞬间。</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">岁</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">无限</span>
+                    <span class="stat-label">可能</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">爱</span>
+                </div>
+            </div>
+            <div class="about-hobbies">
+                <span>画画</span>
+                <span>看书</span>
+                <span>咩猫</span>
+                <span>玩耍</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>曾婉之的照片集</h1>
+                <p>记录成长的每一刻，珍藏美好的回忆</p>
+                <div class="header-decoration">
+                    <div class="decoration-line"></div>
+                    <i class="fas fa-heart"></i>
+                    <div class="decoration-line"></div>
+                </div>
+                <div class="header-icons">
+                    <a href="about.html" class="header-icon-link" title="了解更多关于曾婉之">
+                        <i class="fas fa-laugh"></i>
+                    </a>
+                    <a href="https://github.com/yichenblog/photo-gallery/" target="_blank" class="header-icon-link" title="给项目点个Star吧">
+                        <i class="fas fa-star"></i>
+                    </a>
+                    <a href="project.html" class="header-icon-link" title="关于本项目">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="#about-card" class="header-icon-link about-icon-link" title="关于曾婉之">
+                        <i class="fas fa-laugh"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="gallery" id="photo-gallery">
+            <!-- 照片由JavaScript动态加载 -->
+        </main>
+
+        <div class="load-more-container">
+            <button id="load-more" class="load-more-btn">
+                <span>更多丸子</span>
+                <i class="fas fa-heart"></i>
+            </button>
+            <div class="loading-indicator">
+                <div class="loading-spinner-small"></div>
+                <span>加载中...</span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>曾婉之 © 2024 - 充满爱的照片集</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-weibo"></i></a>
+                    <a href="https://v.douyin.com/R-ybdaunGhU/" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 全屏查看器 -->
+    <div class="fullscreen-viewer" id="viewer">
+        <div class="viewer-container">
+            <div class="viewer-header">
+                <h3></h3>
+            </div>
+            <div class="viewer-content">
+                <button class="nav-button prev-button">‹</button>
+                <div class="image-container">
+                    <img src="" alt="" class="viewer-image">
+                    <!-- 使用包裹div以便更好地控制加载指示器 -->
+                    <div class="spinner-container">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+                <button class="nav-button next-button">›</button>
+            </div>
+            <div class="viewer-footer">
+                <div class="image-counter"></div>
+            </div>
+            <button class="close-viewer">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+</html>

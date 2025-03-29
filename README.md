@@ -1,7 +1,7 @@
 # 简约相册开源项目
 
 <p align="center">
-  <img src="https://img.alicdn.com/imgextra/i2/2212723071657/O1CN01dY34ov1O6xKESoh5k_!!2212723071657.jpg" alt="简约相册" width="150">
+  <img src="img/logo.jpg" alt="简约相册" width="150">
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/your-github-username/photo-gallery.git
+git clone https://github.com/yichenblog/photo-gallery.git
 ```
 
 ### 2. 添加照片
@@ -146,6 +146,53 @@ function closeViewer() {
 }
 ```
 
+## 如何添加自己的图片
+
+如果您想添加自己的图片到相册中，只需按照以下步骤操作：
+
+### 1. 添加图片文件
+
+1. 将您的图片文件放入 `img` 目录中
+2. 为了保持一致性，建议使用 `.jpg` 或 `.png` 格式
+3. 建议将图片命名为数字序列(如 `11.jpg`, `12.jpg`)或使用有意义的名称
+
+### 2. 修改图片数据源
+
+在 `script.js` 文件中找到 `allImageSources` 数组(约在第50行左右)，添加您的新图片信息：
+
+```js
+const allImageSources = [
+    { src: "img/1.jpg", title: "甜蜜微笑 #1" },
+    { src: "img/2.jpg", title: "快乐时光 #2" },
+    // ... 现有图片 ...
+    
+    // 添加您的新图片
+    { src: "img/your-image.jpg", title: "您的图片标题" },
+    { src: "img/another-image.jpg", title: "另一张图片标题" }
+];
+```
+
+### 3. 调整初始加载数量(可选)
+
+如果您添加了很多图片，可能需要调整初始加载的图片数量：
+
+```js
+// 在script.js中找到这一行(约在第61行)
+const initialLoadCount = 9;
+// 修改为您想要的初始显示数量
+```
+
+### 4. 刷新页面查看效果
+
+保存修改后，刷新网页即可看到您添加的新图片。新图片将显示在"加载更多"按钮点击后的内容中，除非您增加了初始加载数量。
+
+### 注意事项
+
+1. 图片尺寸：为获得最佳显示效果，建议使用宽高比接近1:1的图片
+2. 文件大小：请优化图片大小，建议单张图片不超过500KB
+3. 图片数量：添加过多图片可能会影响页面加载速度，建议保持合理数量
+4. 如需修改图片标题或显示顺序，只需调整`allImageSources`数组中的对应项
+
 ## 许可证
 
 本项目采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 进行许可。这意味着你可以自由地使用、修改和分发这个项目，但**不允许用于商业目的**，且必须保留原始作者署名并以相同许可方式共享。
@@ -162,5 +209,5 @@ function closeViewer() {
 
 如有任何问题或建议，欢迎通过以下方式联系我们：
 
-- GitHub: [https://github.com/yichenblog/](https://github.com/yichenblog/)
+- GitHub: [yichenblog](https://github.com/yichenblog/)
 - 邮箱: yic@rl1.cc 

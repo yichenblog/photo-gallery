@@ -1,0 +1,166 @@
+/* 移动端时间线优化样式 */
+
+/* 针对小屏幕设备的时间线优化 */
+@media (max-width: 768px) {
+    /* 调整时间线容器 */
+    .timeline {
+        padding: 20px 0;
+        margin-left: 10px;
+    }
+    
+    /* 调整时间线中轴线 */
+    .timeline::before {
+        left: 20px;
+        width: 2px;
+        background: rgba(255, 107, 107, 0.4);
+    }
+    
+    /* 统一时间线项目方向 */
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        flex-direction: row;
+        margin-bottom: 30px;
+        padding-left: 15px;
+    }
+    
+    /* 调整日期标签 */
+    .timeline-date {
+        width: 80px;
+        font-size: 0.9rem;
+        margin-left: 30px;
+        margin-right: 15px;
+        padding: 7px 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* 调整内容区域 */
+    .timeline-content {
+        width: calc(100% - 145px);
+        padding: 15px;
+        margin-left: 5px;
+    }
+    
+    /* 调整内容前的圆点 */
+    .timeline-item .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        width: 12px;
+        height: 12px;
+        left: -36px;
+        top: 15px;
+        border-width: 3px;
+    }
+    
+    /* 减少内容区域的阴影和动画效果 */
+    .timeline-content {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transform: none !important;
+    }
+    
+    /* 调整标题和文本大小 */
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .timeline-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* 针对超小屏幕设备的进一步优化 */
+@media (max-width: 480px) {
+    /* 进一步缩小日期标签 */
+    .timeline-date {
+        width: 70px;
+        font-size: 0.8rem;
+        margin-left: 25px;
+        margin-right: 10px;
+        padding: 5px 0;
+    }
+    
+    /* 调整内容区域宽度 */
+    .timeline-content {
+        width: calc(100% - 125px);
+        padding: 12px;
+    }
+    
+    /* 调整内容前的圆点位置 */
+    .timeline-item .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -32px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* 减少间距 */
+    .timeline-item {
+        margin-bottom: 25px;
+    }
+    
+    /* 调整文本大小 */
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* 优化时间线标题 */
+    .timeline-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-section h2::after {
+        width: 60px;
+        height: 2px;
+        bottom: -10px;
+    }
+}
+
+/* 修复特定机型上的显示问题 */
+@media (max-width: 360px) {
+    /* 进一步调整布局以适应超窄屏幕 */
+    .timeline-date {
+        width: 60px;
+        font-size: 0.75rem;
+        margin-left: 22px;
+        margin-right: 8px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 110px);
+        padding: 10px;
+    }
+    
+    /* 调整圆点位置 */
+    .timeline-item .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -30px;
+    }
+    
+    /* 减少文本大小 */
+    .timeline-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+/* 修复iOS设备上的特定问题 */
+@supports (-webkit-touch-callout: none) {
+    .timeline-content {
+        /* 修复iOS上的模糊效果问题 */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* 修复iOS上的滚动和动画性能问题 */
+    .timeline-item {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
